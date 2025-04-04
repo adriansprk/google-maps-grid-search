@@ -1,0 +1,67 @@
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Results and screenshots
+results*/
+!results/
+results/*
+!results/.gitkeep
+*.png
+*.jpg
+*.jpeg
+*.csv
+review_*.png
+*review_extraction*.png
+*_error.png
+*before_*.png
+*after_*.png
+cookie_*.png
+maps_*.png
+search_*.png
+review_loading_attempt_*.png
+no_review_items.png
+
+# Sensitive information
+*.env
+.env
+config.json
+secrets.json
+
+# Logs
+*.log
+
+# Output file
+physiotherapists_berlin.txt 

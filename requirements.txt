@@ -1,0 +1,7 @@
+requests
+python-dotenv
+langdetect==1.0.9
+google-cloud-translate==2.0.1
+playwright==1.40.0
+pandas==2.0.3
+tqdm==4.66.1 
