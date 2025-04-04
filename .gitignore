@@ -64,4 +64,28 @@ secrets.json
 *.log
 
 # Output file
-physiotherapists_berlin.txt 
+physiotherapists_berlin.txt
+
+# Output maps (large HTML files)
+map_*.html
+*combined*.html
+berlin_physiotherapists_map.html
+
+# Generated data directories
+detailed_place_data/
+
+# CSV data files
+*.csv
+
+# Python environment
+.venv/
+mapvenv/
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db 
