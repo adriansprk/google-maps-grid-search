@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from collections import deque
 
 # --- Command Line Arguments ---
-parser = argparse.ArgumentParser(description="Extract physiotherapist place IDs from Google Maps API")
+parser = argparse.ArgumentParser(description="Extract place data from Google Maps API using grid-based search")
 parser.add_argument("--dry-run", action="store_true", help="Run in dry run mode with mock responses")
 parser.add_argument("--test-area", choices=["alexanderplatz", "tiergarten", "kreuzberg", "friedrichstrasse", "all"], 
                     help="Run on specific test area instead of full Berlin")
@@ -19,6 +19,10 @@ parser.add_argument("--max-calls", type=int, default=0,
 parser.add_argument("--visualize", action="store_true", help="Generate visualization maps of the search")
 parser.add_argument("--param-test", action="store_true", help="Run parameter sensitivity testing")
 parser.add_argument("--combine-maps", nargs='+', help="Combine multiple saved map data files into one visualization")
+parser.add_argument("--place-type", type=str, default="physiotherapist", 
+                    help="The type of place to search for (e.g., restaurant, cafe, gym)")
+parser.add_argument("--location", type=str, default="Berlin, Germany",
+                    help="The location to search in (e.g., 'New York, NY', 'London, UK')")
 args = parser.parse_args()
 
 # --- Configuration ---
@@ -32,8 +36,9 @@ BASE_NEARBY_SEARCH_URL = "https://maps.googleapis.com/maps/api/place/nearbysearc
 GEOCODING_URL = "https://maps.googleapis.com/maps/api/geocode/json"
 PLACE_DETAILS_URL = "https://maps.googleapis.com/maps/api/place/details/json"
 
-TARGET_LOCATION = "Berlin, Germany"
-PLACE_TYPE = "physiotherapist"
+# Use command line arguments if provided, otherwise use defaults
+TARGET_LOCATION = args.location
+PLACE_TYPE = args.place_type
 
 # Critical API parameters
 MAX_RADIUS = 5000  # Maximum allowed radius in meters (5km)
