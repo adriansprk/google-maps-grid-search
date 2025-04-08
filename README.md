@@ -1,5 +1,7 @@
 # Google Maps Place Search Tool
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Google Maps API](https://img.shields.io/badge/Google%20Maps%20API-Places-success) ![Geospatial](https://img.shields.io/badge/Geospatial-Grid%20Search-orange) ![Data Collection](https://img.shields.io/badge/Data-Collection-lightgrey) ![License](https://img.shields.io/badge/License-MIT-green)
+
 A Python-based tool for extracting place data from Google Maps using the Google Places API. The tool employs an adaptive grid-based approach to efficiently find and extract data about any type of establishment in a geographic area.
 
 ## Features
